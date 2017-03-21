@@ -8,24 +8,27 @@ only if both are negative.
 -----------------------------------------------------------------------
 
 """
-
-
-def pos_neg(a, b, negative):
-    pass
+def pos_neg (x, y):
+    x=1
+    y=-1
+    if (x > 0) and (y < 0):
+        return True
+    elif (x < 0) and (y < 0):
+        return True
 
 
 # Expected outputs:
-
-print(pos_neg(1, -1, False))
-# True
-print(pos_neg(-1, 1, False))
-# True
-print(pos_neg(-4, -5, True))
-# True
-print(pos_neg(-2, -5, False))
-# False
-print(pos_neg(1, 2, False))
-# False
+#
+# print(pos_neg(1, -1, False))
+# # True
+# print(pos_neg(-1, 1, False))
+# # True
+# print(pos_neg(-4, -5, True))
+# # True
+# print(pos_neg(-2, -5, False))
+# # False
+# print(pos_neg(1, 2, False))
+# # False
 
 
 """
@@ -43,10 +46,14 @@ years (for example, 2000).
 -----------------------------------------------------------------------
 
 """
-
-
+import calendar
 def leap_year(year):
-    pass
+    if year%4==0 and year%100==0:
+        if n%400==0:
+            print (year, "is a leap year.")
+        elif n%4==0:
+            print (year, "is not a leap year.")
+    print (leap_year(2016))
 
 
 # When you've completed your function, uncomment the
@@ -69,10 +76,11 @@ Write a function with loops that computes the sum of all squares between
 -----------------------------------------------------------------------
 
 """
-
-
 def sum_squares(n):
-    pass
+    return sum([i**2 for i in range(1, n+1)])
+
+def square_of_sum (n):
+    return sum(range(1, n+1))
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
